@@ -8,21 +8,21 @@ Focus on LESS and Webpack. Make responsive if time allows. Make an edit page if 
 
 
 ADMIN SECTION
-Make a survey with swappable parts
+Make a survey with swappable parts.
 
 TEMPLATES  -- first page
-Name
-Topic
-Subject - whatever was taught that day
-Recipient Group
-Date
-Questions
+Name, 
+Topic, 
+Subject - whatever was taught that day, 
+Recipient Group, 
+Date, 
+Questions, 
 
-TOPIC - can add a list of topics  -- second page
+TOPIC - can add a list of topics  -- second page.
 "how did Jarod do?"  Jarod must be replaceable - use an escape sequence eg $$instructor_name$$
-Jarod
-Michael
-Jeremy
+Jarod, 
+Michael, 
+Jeremy, 
 
 SUBJECT - what was taught that day
 
