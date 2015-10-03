@@ -1,0 +1,206 @@
+/*
+  LESS stylesheet
+  Sarah Westbrook
+  Personal Project
+  10-2-15
+*/
+
+/* VARIABLES, MIXINS, FUNCTIONS */
+
+//headers
+@font1: proxima-nova, sans-serif;
+// footer, paragraphs
+@font2: "Helvetica Neue", Helvetica, Arial,sans-serif;
+@fontsize: 16px;
+@color1: #FFFFFF;    // header
+@color2: #404041;    // text color, main content background
+@color3: #2AABE2;    // solid blue (cerulean)
+@color4: #000000;    // footer
+@bordercolor: darken(@color3, 20%);
+.links {
+  text-decoration: none;
+}
+
+.vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50);
+}
+
+
+
+/* GLOBAL STYLES */
+
+body {
+  width: 100%;
+  position: relative;
+  // top: 0;
+  // left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-family: @font2;
+}
+
+
+
+/* HEADER */
+header {
+  color: @color2;
+  background-color: @color1;
+  font-family: @font2;
+  //width: 100%;
+
+  div#logo {
+    float: left;
+    margin-left: 15px;
+  }
+
+  div#login {
+    float: right;
+    margin-right: 15px;
+
+    ul {
+      li {
+        display: inline-block;
+        padding: 0 20px;
+
+        a {
+          color: @color2;
+          .links;
+
+          &:hover {
+            transition: .5s ease;
+            color: @color3;
+          }
+        }
+      }
+    }
+  }
+}  // end header styles
+
+.container {
+  clear: both;
+  display: flex;
+  height: 550px;
+}
+
+
+
+/* MAST */
+div#mast {
+  background-image: url("..images/bg-blue.png");
+  background: linear-gradient(rgb(42, 171, 226) 10%, rgb(60, 158, 200) 90%);
+  width: 15%;
+  float: left;
+  padding: 10px;
+
+  ul {
+    // doesn't do anything
+    //.vertical;
+
+    li {
+      list-style-type: none;
+      margin: 10px;
+      width: 50px;
+      padding: 10px 5px;
+
+      a {
+        color: @color1;
+        background-color: @color4;
+        border: 2px solid @color1;
+        font-family: @font2;
+        font-size: @fontsize / 1.3;
+        padding: 15px 5px 0 5px;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          background-color: lighten(@color3, 10%);
+        }
+      }
+
+      .button {
+        display: block;
+        height: 30px;
+        width: 120px;
+        background: @color3;
+        border: 1px solid @bordercolor;
+        //border-radius: 5px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+/* MAIN */
+div#main {
+  // color: @color1;
+  background-color: @color2;
+  background-image: url("../images/dark_geometric.png");
+  // border-left: 3px solid #191919;
+  width: 85%;
+  float: right;
+  padding: 10px;
+  position: relative;
+
+  #workspace {
+    background-color: @color1;
+    color: @color2;
+    // border: 3px solid #191919;
+    width: 90%;
+    height: 420px;  // make a percentage for scrolling
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    // position: absolute;
+    // top: 25px;
+    // left: 25px;
+  }
+}   // end main styles
+
+
+/* FOOTER STYLES */
+footer {
+  clear: both;
+  color: @color1;
+  background-color: @color4;
+  font-family: @font2;
+  font-size: @fontsize / 1.3;
+  width: 100%;
+  height: 10px;
+  padding: 20px 0;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+
+  ul {
+    margin: 0 auto;
+
+    li {
+      font-family: @font2;
+      display: inline-block;
+      padding: 0 60px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// from devmtn site
+// blue background with pale constellations ?
+// background-color: rgba(0, 0, 0, 0);
+// background-image: url(https://devmounta.in/img/bg-speck.png), linear-gradient(rgb(42, 171, 226) 10%, rgb(60, 158, 200) 90%);
+// background-size: auto, auto;
